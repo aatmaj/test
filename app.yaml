@@ -1,0 +1,52 @@
+application: mytestappdg
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /
+  static_files: index.html
+  upload: index.html
+  
+#specific html pages:
+- url: /index.html
+  static_files: index.html
+  upload: index.html
+
+
+- url: /about.html
+  static_files: about.html
+  upload: about.html
+
+- url: /contact.html
+  static_files: contact.html
+  upload: contact.html
+  
+- url: /courses.html
+  static_files: courses.html
+  upload: courses.html
+
+- url: /fees.html
+  static_files: fees.html
+  upload: fees.html
+
+- url: /portfolio.html
+  static_files: portfolio.html
+  upload: portfolio.html
+  
+- url: /sidebar-right.html
+  static_files: sidebar-right.html
+  upload: sidebar-right.html
+  
+- url: /assets/images/1.jpg
+  static_files: assets/images/1.jpg
+  upload: assets/images/1.jpg
+  
+- url: /(.*\.(gif|png|jpeg|jpg|ico|bmp|css|otf|eot|svg|ttf|woff))
+  static_files: assets/\1
+  upload: assets/(.*\.(gif|png|jpeg|jpg|ico|bmp|css|otf|eot|svg|ttf|woff))
+  
+libraries:
+- name: webapp2
+  version: "2.5.2"
